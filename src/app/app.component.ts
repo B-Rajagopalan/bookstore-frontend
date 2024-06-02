@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HelloWorldService } from './services/helloworld.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +10,7 @@ import { HelloWorldService } from './services/helloworld.service';
 export class AppComponent {
   title = 'bookstore-frontend';
 
-  constructor(private helloWorldService: HelloWorldService) {}
+  constructor() {}
 
   ngOnInit() {
 
