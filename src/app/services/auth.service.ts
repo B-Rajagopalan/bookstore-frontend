@@ -11,4 +11,11 @@ export class AuthService {
                 console.log(data);
             });
     }
+
+    registerUser(registerData: JSON) {
+        this.http.post<any>('/api/auth/register', registerData)
+            .subscribe((data) => {
+                console.log(data);
+            });
+    }
 }
