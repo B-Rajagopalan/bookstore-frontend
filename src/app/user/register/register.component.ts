@@ -4,7 +4,7 @@ import { AuthService } from '../../services/auth.service';
 @Component({
     selector: 'app-register',
     template: `
-    <div>
+    <div class='register'>
         <form #loginForm="ngForm" (ngSubmit)="registerUser(loginForm.value)">
             <h1>Register New User</h1>
             <h4>Name</h4>
@@ -17,7 +17,13 @@ import { AuthService } from '../../services/auth.service';
             <button style="background-color: forestgreen;">Register</button>
         </form>
     </div>
-    `
+    `,
+    styles: [
+        `.register {
+            margin: 0 auto;
+            width: 300px
+        }`
+    ]
 })
 
 export class RegisterComponent {

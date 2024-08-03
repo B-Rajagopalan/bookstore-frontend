@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector: 'app-login',
     template: `
-    <div>
+    <div class='login'>
         <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
             <h1>Login</h1>
             <h4>Email</h4>
@@ -15,7 +16,13 @@ import { AuthService } from '../../services/auth.service';
             <button style="background-color: aqua;">Login</button>
         </form>
     </div>
-    `
+    `,
+    styles: [
+        `.login {
+            margin: 0 auto;
+            width: 300px
+        }`
+    ]
 })
 
 export class LoginComponent {
@@ -23,9 +30,10 @@ export class LoginComponent {
     email!: string;
     password!: string;
 
-    constructor(private auth: AuthService) { }
+    constructor(private auth: AuthService, private router: Router) { }
 
     loginUser(loginData: any) {
         this.auth.loginUser(loginData);
+        this.router.navigate(["/home"]);
     }
 }
