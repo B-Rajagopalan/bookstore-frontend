@@ -1,3 +1,31 @@
 .userauth {
     float: right;
+    display: flex;
+    gap: 8px;
+}
+
+.homeButton {
+    border: none;
+    width: 100px;
+    height: 45px;
+    background-color: black;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 545;
+    font-style: normal;
+    border-radius:  5px;
+    cursor: pointer;
+}
+
+.authButton {
+    border: lightgrey;
+    width: 100px;
+    height: 45px;
+    background-color: black;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 545;
+    font-style: normal;
+    border-radius: 5px;
+    cursor: pointer;
 }

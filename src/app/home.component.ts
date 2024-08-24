@@ -6,19 +6,24 @@ import { DataService } from './services/data.service';
     template: `
     <div class='books'>
         <div style='margin: 0 auto; padding: 40px;' *ngFor="let book of books">
-            {{book.bookName}} <br>
+            <img class="img" src={{book.imgSource}} alt="">
+            <span>{{book.bookName}}</span>
         </div>
     </div>
     `,
     styles: [
         `.books {
             display: flex;
-            flex-direction: row;
-            background-color: aqua;
-            width: 800px;
+            margin: 100px 0;
+            background-color: lightgrey;
+            border: 100px;
+        }
+        .img {
+            width: 200px;
             height: 150px;
-            margin: 100px auto;
-        }`
+            object-fit: cover;
+        }
+        `
     ]
 })
 

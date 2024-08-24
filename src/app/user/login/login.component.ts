@@ -13,7 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
             <h4>Password</h4>
             <input (ngModel)="password" name="password" [type]="toggleType?'password':'text'"/> &nbsp;
             <button type="button" (click)="toggleType = !toggleType">{{(toggleType? "Show":"Hide") +" Password"}}</button> <br><br>
-            <button style="background-color: aqua;">Login</button>
+            <button style="background-color: green; color: white; cursor: pointer;">Login</button>
         </form>
     </div>
     `,
